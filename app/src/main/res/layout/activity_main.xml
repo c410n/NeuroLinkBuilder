@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:screenOrientation="portrait">
+
+    <!--android:background="@drawable/"-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/textViewFocusingQuestionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Question (click to alter):"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/textViewQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:padding="5dp"
+            android:text="A very boring and long line, long, very long, till the level of possible, even longer. Just long."
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@color/colorBlack"
+            android:onClick="onFocusingQuestionCurrentViewClick"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webViewQuestionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/webViewQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/textviewshape"
+                android:scrollbars="none"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:onClick="onFocusingQuestionCurrentViewClick"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewFocusingAnswerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Answer (click to alter):"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/colorBlack"/>
+
+        <TextView
+            android:id="@+id/textViewAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:padding="5dp"
+            android:text="A very boring and long line, long, very long, till the level of possible, even longer. Just long."
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@color/colorBlack"
+            android:onClick="onFocusingAnswerCurrentViewClick"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/webViewResponseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/webViewResponse"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/textviewshape"
+                android:backgroundTint="#EEEEEE"
+                android:scrollbars="none"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:onClick="onFocusingAnswerCurrentViewClick"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewStatisticsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Statistics:"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/textViewStatistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textviewshape"
+            android:padding="5dp"
+            android:text="No database file was loaded"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textColor="@color/colorBlack" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/btnShowAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:onClick="onBtnShowAnswerClicked"
+            android:padding="20dp"
+            android:text="Show Answer" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnIKnew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonshape"
+                    android:onClick="onBtnIKnewClicked"
+                    android:padding="20dp"
+                    android:text="I knew"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnIDidnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonshape"
+                    android:onClick="onBtnIDidntClicked"
+                    android:padding="20dp"
+                    android:text="I didn't"
+                    android:visibility="gone" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnPass"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonshape"
+                    android:onClick="onBtnPassClicked"
+                    android:padding="20dp"
+                    android:text="PASS" />
+
+                <Button
+                    android:id="@+id/btnFlag"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonshape"
+                    android:onClick="onBtnFlagClicked"
+                    android:padding="20dp"
+                    android:text="FLAG" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/btnLoadDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonshape"
+            android:onClick="onBtnLoadDatabaseClicked"
+            android:padding="20dp"
+            android:text="Load Database" />
+
+    </LinearLayout>
+</FrameLayout>

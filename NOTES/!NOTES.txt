@@ -1,0 +1,13 @@
+Tasks:
+
+TODO: h. Bug when the phone starts (logs available) and bug when the phone exits the app but the service making alarms stays
+TODO: u. Возможность откатить действие назад на один шаг, например через диалоговое окно слайдом вправо
+TODO c. Implement a mode with choices instead of "know"/"don't know" as a separate overlapping window
+TODO r. Нагенерить словарей с уравнением и его решением в ответе, при помощи отдельного Питон скрипта
+TODO d. Ability to enter a new term and definition with default values
+TODO f. Image based question and answer with auto-scaling of the image
+
+Tools:
+
+1. http://angrytools.com/android/button/
+2. adb shell dumpsys alarm
